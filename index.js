@@ -59,3 +59,12 @@ for (let i = 1; i < size; i++) {
 console.log("-".repeat(size + 6));
 
 // 7. Задачка з *: Зробити квадрат зі зворотньою діагоналлю (з правого верхнього до лівого нижнього)
+
+const Square_Size_2 = 5;
+console.log("-".repeat(Square_Size_2 + 6));
+for (let i = 1; i < Square_Size_2; i++) {
+  console.log(
+    "|" + "  ".repeat(Square_Size_2 - i - 1) + "." + "  ".repeat(i) + "|"
+  );
+}
+console.log("-".repeat(Square_Size_2 + 6));
