@@ -44,9 +44,18 @@ for (let i = 10; i <= 50; i++) {
 
 // 5. Намалювати в консолі символами “*” трикутник заданого користувачем розміру
 
-let triangleSize = prompt("Enter the size of the triangle:");
-for (let i = 1; i <= triangleSize; i++) {
-  console.log("*".repeat(i));
+let triangleSize = Number(prompt("Enter the size of the triangle:"));
+
+if (isNaN(triangleSize) || triangleSize <= 0) {
+  console.log("Будь ласка, введіть коректне додатне число.");
+} else {
+  for (let i = 1; i <= triangleSize; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += "*";
+    }
+    console.log(row);
+  }
 }
 
 // 6. Намалювати пустий квадрат з діагоналлю (зліва зверху - до права низу)
