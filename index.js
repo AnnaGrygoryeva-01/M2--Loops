@@ -60,12 +60,19 @@ if (isNaN(triangleSize) || triangleSize <= 0) {
 
 // 6. Намалювати пустий квадрат з діагоналлю (зліва зверху - до права низу)
 
-const size = 5;
-console.log("-".repeat(size + 6));
-for (let i = 1; i < size; i++) {
-  console.log("|" + "  ".repeat(i) + "." + "  ".repeat(size - i - 1) + "|");
+const size = Number(prompt("Enter size of the square:"));
+
+for (let i = 0; i < size; i++) {
+  let row = "";
+  for (let j = 0; j < size; j++) {
+    if (i === 0 || i === size - 1 || j === 0 || j === size - 1 || i === j) {
+      row += "*";
+    } else {
+      row += " ";
+    }
+  }
+  console.log(row);
 }
-console.log("-".repeat(size + 6));
 
 // 7. Задачка з *: Зробити квадрат зі зворотньою діагоналлю (з правого верхнього до лівого нижнього)
 
