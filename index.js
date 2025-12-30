@@ -76,11 +76,22 @@ for (let i = 0; i < size; i++) {
 
 // 7. Задачка з *: Зробити квадрат зі зворотньою діагоналлю (з правого верхнього до лівого нижнього)
 
-const Square_Size_2 = 5;
-console.log("-".repeat(Square_Size_2 + 6));
-for (let i = 1; i < Square_Size_2; i++) {
-  console.log(
-    "|" + "  ".repeat(Square_Size_2 - i - 1) + "." + "  ".repeat(i) + "|"
-  );
+const squareSize2 = Number(prompt("Enter square size:"));
+
+for (let i = 0; i < squareSize2; i++) {
+  let row = "";
+  for (let j = 0; j < squareSize2; j++) {
+    if (
+      i === 0 ||
+      i === squareSize2 - 1 ||
+      j === 0 ||
+      j === squareSize2 - 1 ||
+      i + j === squareSize2 - 1
+    ) {
+      row += "*";
+    } else {
+      row += " ";
+    }
+  }
+  console.log(row);
 }
-console.log("-".repeat(Square_Size_2 + 6));
