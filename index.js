@@ -5,10 +5,10 @@ for (let i = 1; i <= 10; i++) {
 
 // 2. Написати код, який запитує через prompt пароль користувача, порівнює його з тим, який у неї збережений (захардкоджений у константі). Якщо пароль співпав - виводить на консоль “Ви успішно увійшли в систему”, якщо ні - продовжує запитувати пароль і перевіряти, поки не введуть правильно (за допомогою вічного цикла)
 
-const Password_Stored = "Anna123";
+const passwordStored = "Anna123";
 let passwordInput = prompt("Enter your password:");
 
-while (passwordInput !== Password_Stored) {
+while (passwordInput !== passwordStored) {
   passwordInput = prompt("Incorrect password. Please try again:");
 }
 console.log("You have successfully logged in.");
@@ -18,7 +18,7 @@ console.log("You have successfully logged in.");
 while (true) {
   let passwordInput = prompt("Enter your password:");
 
-  if (passwordInput === Password_Stored) {
+  if (passwordInput === passwordStored) {
     console.log("You have successfully logged in.");
     break;
   } else {
